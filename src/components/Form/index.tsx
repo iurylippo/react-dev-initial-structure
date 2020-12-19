@@ -3,12 +3,10 @@ import React, { PropsWithChildren } from 'react';
 interface Props {
 }
 
-const Form  = ({children} : PropsWithChildren<Props>) => {
-  return (
-    <form>
-        {children}
-    </form>
-  );
-}
+const Form = ({ children } : PropsWithChildren<Props>) => (
+  <form>
+    {children}
+  </form>
+);
 
 export default Form;
