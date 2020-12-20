@@ -1,7 +1,7 @@
 import React from 'react';
-import Signin from './pages/Signin';
+import Signin from '../pages/Signin';
 
-import './styles/sass/global.scss';
+import '../styles/sass/global.scss';
 
 const App = () => <Signin />;
 
