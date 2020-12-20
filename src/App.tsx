@@ -3,10 +3,6 @@ import Signin from './pages/Signin';
 
 import './styles/sass/global.scss';
 
-function App() {
-  return (
-    <Signin />
-  );
-}
+const App = () => <Signin />;
 
 export default App;

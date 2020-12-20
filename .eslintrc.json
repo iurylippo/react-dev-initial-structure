@@ -5,16 +5,17 @@
         "jest": true
     },
     "extends": [
-        // "airbnb-typescript/base",
-        "eslint-config-airbnb/base",
-        "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "airbnb",
+        "eslint:recommended",
+        "eslint-config-airbnb/base",
+        "airbnb-typescript/base",
         "plugin:react/recommended",
-        // "plugin:prettier/recommended",
+        "plugin:prettier/recommended",
+        "prettier",
         "prettier/@typescript-eslint",
-        "prettier/react",
-        "airbnb"
+        "prettier/react"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -27,11 +28,11 @@
     },
     "plugins": ["react", "@typescript-eslint", "prettier"],
     "rules": {
+        "prettier/prettier": "error",
         "no-useless-constructor": "off",
         "@typescript-eslint/no-unused-vars": ["off"],
         "@typescript-eslint/no-useless-constructor": "error",
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", "tsx"] }],
-        // "prettier/prettier": "error",
         "space-before-function-paren": "off",
         "react/prop-types": "off",
         "no-use-before-define": "off",
@@ -40,17 +41,9 @@
         "import/no-unresolved": "off",
         "import/extensions": "off",
         "@typescript-eslint/no-empty-interface": "off",
-        "react/jsx-props-no-spreading": "off"
-        // "import/extensions": [
-        //     "error",
-        //     "ignorePackages",
-        //     {
-        //         "js": "never",
-        //         "jsx": "never",
-        //         "ts": "never",
-        //         "tsx": "always"
-        //     }
-        // ]
+        "react/jsx-props-no-spreading": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
+
         // "linebreak-style": ["error", "unix"]
     }
 }
