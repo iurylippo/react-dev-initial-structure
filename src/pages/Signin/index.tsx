@@ -32,12 +32,10 @@ const Signin = () => {
                     <Input.Password id="user-pass" placeholder={t('signin.fields.placeholders.password')} />
                 </FormGroup>
 
-                <Button className={styles.signin} block>
-                    {t('signin.buttons.login')}
-                </Button>
+                <Button block>{t('signin.buttons.login')}</Button>
                 <hr />
 
-                <div className={styles.signup_box}>
+                <div className={`flex-col-center ${styles.signup_box}`}>
                     <p className={styles.signup_title}>{t('signin.dontHaveAccount')}</p>
                     <a href="/#" className={styles.signup_link}>
                         {t('signin.buttons.createAccount')}
