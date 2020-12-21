@@ -1,0 +1,25 @@
+{
+    "signin": {
+        "title": "Acessar Conta",
+        "forgotPassword": "Esqueceu a senha?",
+        "dontHaveAccount": "Não possui conta?",
+        "fields": {
+            "email": "E-mail",
+            "password": "Senha",
+            "placeholders": {
+                "email": "Informe seu e-mail",
+                "password": "Informe sua senha"
+            }
+        },
+        "button": {
+            "createAccount": "Cadastre-se",
+            "login": "Entrar"
+        }
+    },
+    "notfound": {
+        "title": "Oops!",
+        "buttons": {
+            "backHome": "Voltar para Home"
+        }
+    }
+}

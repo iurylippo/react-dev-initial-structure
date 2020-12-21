@@ -1,0 +1,25 @@
+{
+    "signin": {
+        "title": "Sign in",
+        "forgotPassword": "Forgot password?",
+        "dontHaveAccount": "Doesn't have an account?",
+        "fields": {
+            "email": "E-mail",
+            "password": "Password",
+            "placeholders": {
+                "email": "Enter your e-mail",
+                "password": "Enter your password"
+            }
+        },
+        "buttons": {
+            "createAccount": "Sign up",
+            "login": "Sign in"
+        }
+    },
+    "notfound": {
+        "title": "Oops!",
+        "buttons": {
+            "backHome": "Back Home"
+        }
+    }
+}

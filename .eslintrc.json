@@ -32,7 +32,7 @@
         "no-useless-constructor": "off",
         "@typescript-eslint/no-unused-vars": ["off"],
         "@typescript-eslint/no-useless-constructor": "error",
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", "tsx"] }],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", "tsx", "ts"] }],
         "space-before-function-paren": "off",
         "react/prop-types": "off",
         "no-use-before-define": "off",
