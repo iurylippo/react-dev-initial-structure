@@ -36,13 +36,14 @@
         "space-before-function-paren": "off",
         "react/prop-types": "off",
         "no-use-before-define": "off",
-        "no-unused-vars": "off",
+        "no-unused-vars": "error",
         "@typescript-eslint/no-use-before-define": ["error"],
         "import/no-unresolved": "off",
         "import/extensions": "off",
         "@typescript-eslint/no-empty-interface": "off",
         "react/jsx-props-no-spreading": "off",
         "@typescript-eslint/explicit-module-boundary-types": "off"
+        // "@typescript-eslint/no-explicit-any"
 
         // "linebreak-style": ["error", "unix"]
     }

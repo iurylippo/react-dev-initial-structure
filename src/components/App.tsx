@@ -1,8 +1,8 @@
 import React from 'react';
-import Signin from '../pages/Signin';
 
+import Routes from '../routes';
 import '../styles/sass/global.scss';
 
-const App = () => <Signin />;
+const App = () => <Routes />;
 
 export default App;

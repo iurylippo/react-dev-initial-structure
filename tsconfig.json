@@ -19,7 +19,8 @@
         "declaration": true, // Generate corresponding .d.ts file
         // "noUnusedLocals": true, // Report errors on unused locals
         "noUnusedParameters": true, // Report errors on unused parameters
-        "incremental": true // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
+        "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
+        "plugins": [{ "name": "typescript-plugin-css-modules" }]
     },
     "include": [
         "src/**/*" // *** The files TypeScript should type check ***
