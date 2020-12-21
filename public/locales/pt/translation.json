@@ -9,6 +9,14 @@
             "placeholders": {
                 "email": "Informe seu e-mail",
                 "password": "Informe sua senha"
+            },
+            "validations": {
+                "emailRequired": "O email é obrigatório!",
+                "invalidEmail": "Email inválido!",
+                "passwordRequired": "A senha é obrigatória!",
+                "passwordInvalidLength": "A senha é inválida!",
+                "passwordConfirmationRequired": "A confirmação de senha é obrigatória!",
+                "invalidPasswordConfirmation": "Confirmação de senha inválida!"
             }
         },
         "button": {

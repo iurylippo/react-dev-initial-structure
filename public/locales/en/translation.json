@@ -9,6 +9,14 @@
             "placeholders": {
                 "email": "Enter your e-mail",
                 "password": "Enter your password"
+            },
+            "validations": {
+                "emailRequired": "E-mail is required!",
+                "invalidEmail": "The e-mail is invalid!",
+                "passwordRequired": "Password is required!",
+                "passwordInvalidLength": "The password is invalid!",
+                "passwordConfirmationRequired": "Password confirmation is required",
+                "invalidPasswordConfirmation": "Invalid password confirmation"
             }
         },
         "buttons": {
