@@ -20,7 +20,7 @@ const items: ItemTypes = [
     },
     {
         title: 'Pedidos',
-        path: '/orders',
+        path: '/order',
         icon: <FaIcons.FaFileInvoiceDollar />,
     },
     {

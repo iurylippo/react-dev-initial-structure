@@ -11,7 +11,7 @@ const Notfound = () => {
     return (
         <Container fluid className="container-box-col">
             <Vetor />
-            <Link to="/">
+            <Link to="/dashboard">
                 <Button>{t('notfound.buttons.backHome')}</Button>
             </Link>
         </Container>
