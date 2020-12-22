@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import { Form, FormGroup, Label, Button, Container } from 'reactstrap';
 
 import * as Input from '../../components/Form/Input';
+import Loading from '../../components/Loading';
 
 import styles from './styles.module.scss';
 import signinValidade from './validate';
