@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useHistory } from 'react-router-dom';
-import { toast } from 'react-toastify';
+// import { useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { Form, FormGroup, Label, Button, Container } from 'reactstrap';
 
@@ -9,12 +9,16 @@ import * as Input from '../../components/Form/Input';
 
 import styles from './styles.module.scss';
 import signinValidade from './validate';
+import { StoreState } from '../../store/createStore';
+import { signInRequest } from '../../store/modules/auth/actions';
+import Loading from '../../components/Loading';
 
 const Signin = () => {
     const { t, i18n } = useTranslation();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const history = useHistory();
+    const { loadingSigninRequest } = useSelector((state: StoreState) => state.auth);
+    const dispacth = useDispatch();
 
     const handleChangeLang = (lang: string) => {
         i18n.changeLanguage(lang);
@@ -29,8 +33,7 @@ const Signin = () => {
 
     const handleSignin = () => {
         if (signinValidade(getData())) {
-            toast.success('logou!');
-            history.push('/dashboard');
+            dispacth(signInRequest(getData()));
         }
     };
 
@@ -80,6 +83,7 @@ const Signin = () => {
                 <Button onClick={() => handleChangeLang('pt')}>Pt</Button>
                 <Button onClick={() => handleChangeLang('en')}>En</Button>
             </Container>
+            <Loading loading={loadingSigninRequest} />
         </Container>
     );
 };

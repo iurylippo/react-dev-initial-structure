@@ -11,10 +11,10 @@ const Routes = () => {
     return (
         <>
             <Router>
-                <Route exact path="/notfound" component={Notfound} />
                 <Switch>
                     <Route exact path="/" component={Signin} />
                     <Route component={DefaultRoutes} />
+                    <Route exact path="/notfound" component={Notfound} />
                 </Switch>
             </Router>
         </>

@@ -43,8 +43,9 @@
         "@typescript-eslint/no-empty-interface": "off",
         "react/jsx-props-no-spreading": "off",
         "@typescript-eslint/explicit-module-boundary-types": "off",
-        "react/require-default-props": "off"
-        // "@typescript-eslint/no-explicit-any"
+        "react/require-default-props": "off",
+        "no-console": "off",
+        "@typescript-eslint/no-explicit-any": "off"
 
         // "linebreak-style": ["error", "unix"]
     }
