@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import { Form, FormGroup, Label, Button, Container } from 'reactstrap';
 
 import * as Input from '../../components/Form/Input';
-import Loading from '../../components/Loading';
 
 import styles from './styles.module.scss';
 import signinValidade from './validate';
@@ -14,6 +14,7 @@ const Signin = () => {
     const { t, i18n } = useTranslation();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const history = useHistory();
 
     const handleChangeLang = (lang: string) => {
         i18n.changeLanguage(lang);
@@ -29,6 +30,7 @@ const Signin = () => {
     const handleSignin = () => {
         if (signinValidade(getData())) {
             toast.success('logou!');
+            history.push('/dashboard');
         }
     };
 
