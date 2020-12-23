@@ -24,6 +24,14 @@ export function signInSuccess({ token, userName }: SignInSuccessProps) {
     });
 }
 
+export function logoutRequest() {
+    return action('@auth/LOGOUT_REQUEST');
+}
+
+export function logoutSuccess() {
+    return action('@auth/LOGOUT_SUCCESS');
+}
+
 export function signInFailure() {
     return action('@auth/SIGN_IN_FAILURE');
 }

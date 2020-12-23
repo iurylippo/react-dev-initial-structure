@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-// import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
 import { Form, FormGroup, Label, Button, Container } from 'reactstrap';
 
@@ -17,7 +17,7 @@ const Signin = () => {
     const { t, i18n } = useTranslation();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const { loadingSigninRequest } = useSelector((state: StoreState) => state.auth);
+    const { loadingSigninRequest, isSignin } = useSelector((state: StoreState) => state.auth);
     const dispacth = useDispatch();
 
     const handleChangeLang = (lang: string) => {
@@ -36,6 +36,10 @@ const Signin = () => {
             dispacth(signInRequest(getData()));
         }
     };
+
+    if (isSignin) {
+        return <Redirect to="/dashboard" />;
+    }
 
     return (
         <Container className="container-box-col">

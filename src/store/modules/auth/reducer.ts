@@ -5,6 +5,7 @@ const initalState: AuthState = {
     isSignin: false,
     error: false,
     token: null,
+    userNamer: null,
 };
 
 export default function auth(state = initalState, action: AuthAction): AuthState {
@@ -21,6 +22,7 @@ export default function auth(state = initalState, action: AuthAction): AuthState
                 loadingSigninRequest: false,
                 isSignin: true,
                 token: action.payload.token,
+                userNamer: action.payload.userName,
             };
 
         case '@auth/SIGN_IN_FAILURE':
@@ -28,6 +30,21 @@ export default function auth(state = initalState, action: AuthAction): AuthState
                 ...state,
                 loadingSigninRequest: false,
                 error: true,
+            };
+
+        case '@auth/LOGOUT_REQUEST':
+            return {
+                ...state,
+                token: null,
+                userNamer: null,
+                isSignin: false,
+                loadingSigninRequest: true,
+            };
+
+        case '@auth/LOGOUT_SUCCESS':
+            return {
+                ...state,
+                loadingSigninRequest: false,
             };
 
         default:

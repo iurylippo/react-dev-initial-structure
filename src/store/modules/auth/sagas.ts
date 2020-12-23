@@ -20,4 +20,12 @@ export function* signIn({ payload }: ActionType<typeof actions.signInRequest>) {
     }
 }
 
-export default all([takeLatest('@auth/SIGN_IN_REQUEST', signIn)]);
+export function* logOut() {
+    try {
+        yield put(actions.logoutSuccess());
+    } catch (err) {
+        yield put(actions.signInFailure());
+    }
+}
+
+export default all([takeLatest('@auth/SIGN_IN_REQUEST', signIn), takeLatest('@auth/LOGOUT_REQUEST', logOut)]);
