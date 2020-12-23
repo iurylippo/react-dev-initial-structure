@@ -2,11 +2,22 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar as NavigationBar, Nav, NavItem, NavLink } from 'reactstrap';
 import * as FaIcons from 'react-icons/fa';
-// import * as AiIcons from 'react-icons/ai';
 import { IconContext } from 'react-icons';
 
 import items from './items';
 import styles from './styles.module.scss';
+
+export function withNavBar<P>(WrappedComponent: React.ComponentType<P>) {
+    const ComponentWithExtraInfo = (props: P) => {
+        return (
+            <>
+                <Navbar />
+                <WrappedComponent {...props} />
+            </>
+        );
+    };
+    return ComponentWithExtraInfo;
+}
 
 const Navbar = () => {
     const [sidebar, setSidebar] = useState(false);

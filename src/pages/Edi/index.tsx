@@ -3,7 +3,7 @@ import { Container } from 'reactstrap';
 
 const Edi = () => (
     <Container>
-        <h1>Edi Page</h1>;
+        <h1>Edi Page</h1>
     </Container>
 );
 

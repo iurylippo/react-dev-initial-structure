@@ -3,7 +3,7 @@ import { Container } from 'reactstrap';
 
 const Access = () => (
     <Container>
-        <h1>Access Page</h1>;
+        <h1>Access Page</h1>
     </Container>
 );
 

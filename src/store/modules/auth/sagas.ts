@@ -5,10 +5,6 @@ import * as actions from './actions';
 import { auth } from '../../../services/endpoints';
 import history from '../../../services/history';
 
-function forwardTo(location: string) {
-    history.push(location);
-}
-
 export function* signIn({ payload }: ActionType<typeof actions.signInRequest>) {
     try {
         const { email, password } = payload;
@@ -17,9 +13,8 @@ export function* signIn({ payload }: ActionType<typeof actions.signInRequest>) {
             email,
             password,
         });
-        console.log(data);
         yield put(actions.signInSuccess({ token: data.token, userName: 'Trinity' }));
-        yield call(forwardTo, '/dashboard');
+        history.push('/dashboard');
     } catch (err) {
         yield put(actions.signInFailure());
     }

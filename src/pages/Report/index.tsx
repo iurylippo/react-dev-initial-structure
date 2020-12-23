@@ -3,7 +3,7 @@ import { Container } from 'reactstrap';
 
 const Report = () => (
     <Container>
-        <h1>Report Page</h1>;
+        <h1>Report Page</h1>
     </Container>
 );
 
